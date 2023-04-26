@@ -1,6 +1,8 @@
 # This is going to inject the MySQL Schema
 resource "null_resource" "schema" {
 
+       depends_on = [aws_db_instance.mysql]
+
   provisioner "local-exec" {
         command = <<EOF
         cd /tmp 
