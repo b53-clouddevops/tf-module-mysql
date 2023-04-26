@@ -1,3 +1,4 @@
+# This is going to inject the MySQL Schema
 resource "null_resource" "schema" {
 
   provisioner "local-exec" {
