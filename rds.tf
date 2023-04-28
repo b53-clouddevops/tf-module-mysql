@@ -1,8 +1,8 @@
 # Creates RDS Instance 
 resource "aws_db_instance" "mysql" {
-  # identifier              = "robot-${var.ENV}"
+  identifier              = "robot-${var.ENV}-mysql"
   allocated_storage       = var.MYSQL_RDS_STORAGE
-  db_name                 = "mydb"
+  # db_name                 = "mydb"
   engine                  = "mysql"
   engine_version          = var.MYSQL_RDS_ENGINE_VERSION
   instance_class          = var.MYSQL_RDS_INSTANCE_TYPE
